@@ -9,8 +9,8 @@ class MyTypesController extends \lithium\action\Controller {
 
 	public function index() {
 		$myTypes = MyTypes::all();
-		$myTypesSelect = MyTypes::find('list',array("fields"=>array("id",'name')));
-		return compact('myTypes','myTypesSelect');
+		$MyTypesSelect = MyTypes::find('list',array("fields"=>array("id",'name')));
+		return compact('myTypes','MyTypesSelect');
 	}
 
 	public function view() {
