@@ -10,7 +10,8 @@ class MongoTypesController extends \lithium\action\Controller {
 	public function index() {
 		$mongoTypes = MongoTypes::all();
 		$MongoTypesSelect = MongoTypes::find('list',array("fields"=>array("id",'name')));
-		return compact('mongoTypes','MongoTypesSelect');
+		$MongoTypesSelectID = MongoTypes::find('list',array("fields"=>array("_id",'name')));		
+		return compact('mongoTypes','MongoTypesSelect','MongoTypesSelectID');
 	}
 
 	public function view() {
